@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/archZonesFragment">
+
+    <fragment
+        android:id="@+id/archZonesFragment"
+        android:name="com.example.apptest.fragments.ArchZonesFragment"
+        android:label="fragment_arch_zones"
+        tools:layout="@layout/fragment_layout">
+        <action
+            android:id="@+id/action_archZonesFragment_to_placesDetailsFragment"
+            app:destination="@id/placesDetailsFragment" />
+        <argument
+            android:name="ShowBottomNavView"
+            android:defaultValue="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/placesDetailsFragment"
+        android:name="com.example.apptest.fragments.PlacesDetailsFragment"
+        android:label="PlacesDetailsFragment"
+        tools:layout="@layout/fragment_places_details">
+        <action
+            android:id="@+id/action_placesDetailsFragment_to_archZonesFragment"
+            app:destination="@id/archZonesFragment" />
+        <action
+            android:id="@+id/action_placesDetailsFragment_to_citiesFragment"
+            app:destination="@id/citiesFragment" />
+        <action
+            android:id="@+id/action_placesDetailsFragment_to_natureFragment"
+            app:destination="@id/natureFragment" />
+        <argument
+            android:name="ShowBottomNavView"
+            android:defaultValue="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/citiesFragment"
+        android:name="com.example.apptest.fragments.CitiesFragment"
+        android:label="CitiesFragment"
+        tools:layout="@layout/fragment_layout">
+        <action
+            android:id="@+id/action_citiesFragment_to_placesDetailsFragment"
+            app:destination="@id/placesDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/natureFragment"
+        android:name="com.example.apptest.fragments.NatureFragment"
+        android:label="fragment_nature"
+        tools:layout="@layout/fragment_layout">
+        <action
+            android:id="@+id/action_natureFragment_to_placesDetailsFragment"
+            app:destination="@id/placesDetailsFragment" />
+    </fragment>
+</navigation>

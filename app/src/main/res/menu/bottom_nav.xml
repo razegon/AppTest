@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home_label"
+        android:enabled="true"
+        android:icon="@drawable/baseline_home_24"
+        android:title="@string/home_label" />
+    <item
+        android:id="@+id/cities_label"
+        android:enabled="true"
+        android:icon="@drawable/baseline_city_24"
+        android:title="@string/cities_label" />
+    <item
+        android:id="@+id/archZones_label"
+        android:enabled="true"
+        android:icon="@drawable/baseline_castle_24"
+        android:title="@string/archaeological_zones_label" />
+    <item
+        android:id="@+id/nature_label"
+        android:enabled="true"
+        android:icon="@drawable/baseline_photo_24"
+        android:title="@string/nature_label" />
+</menu>
